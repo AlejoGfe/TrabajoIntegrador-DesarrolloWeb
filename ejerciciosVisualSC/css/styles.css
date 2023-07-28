@@ -2,10 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-weight: 500;
 }
 
 body {
+    display: inline-flex;
     font-family: 'Montserrat', sans-serif;
     background: var(--bg, #F3EBEB);
     font-size: 16px;
@@ -20,8 +20,8 @@ main {
     width: 100%;
 }
 
-/* -------------------------------------------------------------------------*/
-/* -------------------------------------- PERFIL ---------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* -------------------------------------- PERFIL ----------------------------------------*/
 
 .img-contenedor {
     
@@ -35,7 +35,7 @@ img {
 }
 
 .perfil { 
-    padding: 15px;
+    margin: 20px 0;
     flex-direction: column;
     align-items: center;
     margin-top: 5px;
@@ -47,9 +47,11 @@ img {
 .perfil--data {
     padding: 20px;
 }
+
 .contacto h6 {
     font-size: 14px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 
@@ -82,7 +84,7 @@ img {
 
 .skills {
     display: flex;
-    margin-top: 10px;
+    margin: 20px 0;
     padding: 16px;
     flex-direction: column;
     align-items: flex-start;
@@ -93,12 +95,13 @@ img {
 }
 
 .titulos {
-    font-weight: bold;
-    margin-left: 15px;
-    margin-top: 10px;
-    font-size: 16px;
     color: var(--gray-2, #4F4F4F);
-    
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 
@@ -154,14 +157,199 @@ img {
     gap: 16px;
 }
 
-.btn {
+button {
     padding: 12px 16px;
     justify-content: left;
     align-items: left;
     gap: 10px;
     border-radius: 12px;
-    border: 1px solid var(--gray-2, #4F4F4F);
-    background: rgba(255, 255, 255, 0.00);
+    border: 1px solid var(--gray-2, #4f4f4f);
+    background: rgba(255, 255, 255, 0);
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: #2f80ed;
+    color: #fff;
+    border-color: #2f80ed;
+  }
+  
+button:active {
+    background-color: #2f80ed;
+    color: #fff;
+    border-color: #2f80ed;
+  }
 
+/*-----------------------------------------------------------------------------*/
+/* --------------------------------- DEVELOPMENT --------------------------------*/
+
+.development {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: var(--radius-12, 12px);
+    background: #FFF;
+}
+
+
+
+.img-development {
+    width: 360px;
+    height: 300px;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: var(--radius-12, 12px);
+    border: 1px solid var(--gray-3, #C4C4C4);
+    background: url(/img/development.png), lightgray 50% / cover no-repeat;
+}
+
+.development-text {
+    display: block;
+}
+
+.development-text h3 {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    margin: 20px 0;
+}
+
+.development-text h4 {
+    color: var(--gray-2, #4F4F4F);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.development-text p {
+    color: var(--gray, #828282);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.botones-development button{
+    margin: 20px 7px;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*----------------------------- EXPERIENCIA -------------------------------------*/
+
+.experiencia {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 16px;
+    border-radius: 12px;
+    background: #FFF;
+    margin-top: 20px;
+}
+
+.experiencia--ejemplo {
+    display: flex;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid var(--gray-3, #C4C4C4);
 
 }
+
+.experiencia--ejemplo p {
+    align-self: stretch;
+    width: 50%;
+    color: var(--gray, #828282);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.fechaExp {
+    display: flex;
+    width: 50%;
+    padding: 4px;
+    margin-right: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex: 1 0 0;
+    align-self: stretch;
+
+}
+
+.fechaExp h6 {
+    color: var(--gray, #828282);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.fechaExp h5 {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*----------------------------- CERTIFICADOS -------------------------------------*/
+
+.certificados {
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 12px;
+    background: #FFF;
+}
+
+.img-certificados {
+    display: block;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: var(--radius-12, 12px);
+    border: 1px solid var(--gray-3, #C4C4C4);
+    background: url(/img/certificado.png), lightgray 50% / cover no-repeat;
+}
+
+.certificados h5 {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.certificados h6 {
+    color: var(--gray, #828282);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+
